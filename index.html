@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/proyecto_final/tienda/css/style.css">
+    <title>Tienda</title>
+</head>
+<body>
+    <a href="ingresar.html">Login</a>
+    <h1>Hola, bienvenido a la Tienda</h1>
+         <div>
+            <p>Carrito: <label id="cantidad_carrito">0 artículo/s</label></p>
+            
+         </div>
+        <div class="grid-articulos container" id="productos">
+            <div class="one img articulos">Producto 1
+                <button class="btn btn-agregar" onclick="agregar_producto_carrito(0)">Agregar</button>
+                <p id="0"></p>
+            </div>
+            <div class="two img articulos">Producto 2
+                <button class="btn btn-agregar" onclick="agregar_producto_carrito(1)">Agregar</button>
+                <p id="1"></p>
+            </div>
+            <div class="three img articulos">Producto 3
+                <button class="btn btn-agregar" onclick="agregar_producto_carrito(2)">Agregar</button>
+                <p id="2"></p>
+            </div>
+            <div class="four img articulos">Producto 4
+                <button class="btn btn-agregar" onclick="agregar_producto_carrito(3)">Agregar</button>
+                <p id="3"></p>
+            </div>
+            <div class="five img articulos">Producto 5
+                <button class="btn btn-agregar" onclick="agregar_producto_carrito(4)">Agregar</button>
+                <p id="4"></p>
+            </div>
+            <div class="six img articulos">Producto 6
+                <button class="btn btn-agregar" onclick="agregar_producto_carrito(5)">Agregar</button>
+                <p id="5"></p>
+            </div>
+        </div>
+
+    <script src="/proyecto_final/tienda/js/script.js"></script>
+</body>
+</html>
