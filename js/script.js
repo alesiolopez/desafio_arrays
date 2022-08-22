@@ -32,7 +32,7 @@ class Productos{
     listar_productos(){
         for (let i = 0; i < stock_productos.length; i++) {
             console.log("---------------------");
-            console.log("Producto: ", stock_productos[i].codigo);
+            console.log("Código: ", stock_productos[i].codigo);
             console.log("Producto: ", stock_productos[i].nombre);
             console.log("Precio: ", stock_productos[i].precio);
             console.log("Categoría: ", stock_productos[i].categoria);
@@ -58,10 +58,11 @@ function agregar_producto_carrito(producto){
     } else{
         carrito_compras.push(stock_productos[producto]);
         //document.getElementById("cantidad_carrito").innerHTML = `${carrito_compras.length} artículo/s.`;
-        for (let i = 0; i < cantidad_carrito.length; i++) {
+        //document.getElementById("cantidad_carrito").innerHTML = `${carrito_compras[i]} .`;
+        for (let i = 0; i <= cantidad_carrito.length; i++) {
             document.getElementById("cantidad_carrito").innerHTML = `Producto: ${carrito_compras[i]}`;
         }
-        console.log("Carrito: ",carrito_compras);
+        console.log("Carrito por consola: ",carrito_compras); //Funciona.
     }
     
 }
@@ -70,9 +71,9 @@ function agregar_producto_carrito(producto){
 stock_productos.push(new Productos(0001,"Samsung Galaxy S22 Ultra", 332000, "Celulares", "Celular Alta Gama"));
 stock_productos.push(new Productos(0002,"Samsung Galaxy S22+", 273000, "Celulares", "Celular Alta Gama"));
 stock_productos.push(new Productos(0003,"Samsung Galaxy S21+", 332000, "Celulares", "Celular Alta Gama"));
-stock_productos.push(new Productos(0004,"Samsung Galaxy S20", 273000, "Celulares", "Celular Alta Gama"));
-stock_productos.push(new Productos(0005,"Samsung Galaxy S10+", 332000, "Celulares", "Celular Alta Gama"));
-stock_productos.push(new Productos(0006,"Samsung Galaxy S9+", 273000, "Celulares", "Celular Alta Gama"));
+//stock_productos.push(new Productos(0004,"Samsung Galaxy S20", 273000, "Celulares", "Celular Alta Gama"));
+//stock_productos.push(new Productos(0005,"Samsung Galaxy S10+", 332000, "Celulares", "Celular Alta Gama"));
+//stock_productos.push(new Productos(0006,"Samsung Galaxy S9+", 273000, "Celulares", "Celular Alta Gama"));
 
 console.log(stock_productos);
 
@@ -84,6 +85,6 @@ stock_productos[0].listar_productos(); //Consultar por qué debo agregar el par�
 //carrito_compras.push(stock_productos[index]);
 
 
-console.log("Carrito: ",carrito_compras);
+//console.log("Carrito: ",carrito_compras);
 
 //console.log("Carrito agregando otro producto: ",carrito_compras);
