@@ -58,10 +58,10 @@ function agregar_producto_carrito(producto){
     } else{
         carrito_compras.push(stock_productos[producto]);
         //document.getElementById("cantidad_carrito").innerHTML = `${carrito_compras.length} artículo/s.`;
-        //document.getElementById("cantidad_carrito").innerHTML = `${carrito_compras[i]} .`;
-        for (let i = 0; i <= cantidad_carrito.length; i++) {
+        document.getElementById("cantidad_carrito").innerHTML = `${carrito_compras[producto]} .`;
+        /* for (let i = 0; i <= cantidad_carrito.length; i++) {
             document.getElementById("cantidad_carrito").innerHTML = `Producto: ${carrito_compras[i]}`;
-        }
+        } */
         console.log("Carrito por consola: ",carrito_compras); //Funciona.
     }
     
