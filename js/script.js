@@ -58,10 +58,15 @@ function agregar_producto_carrito(producto){
     } else{
         carrito_compras.push(stock_productos[producto]);
         //document.getElementById("cantidad_carrito").innerHTML = `${carrito_compras.length} artículo/s.`;
-        document.getElementById("cantidad_carrito").innerHTML = `${carrito_compras[producto]} .`;
-        /* for (let i = 0; i <= cantidad_carrito.length; i++) {
-            document.getElementById("cantidad_carrito").innerHTML = `Producto: ${carrito_compras[i]}`;
-        } */
+        //document.getElementById("cantidad_carrito").innerHTML = `${carrito_compras[producto]} .`;
+
+        //Trato de listar los productos que agrega al carrito. Al hacer clic en uno y otro se muestra en el label, pero no los agrega uno abajo del otro o a los costados.
+        for (let i = 0; i <= carrito_compras.length; i++) {
+            document.getElementById("cantidad_carrito").innerHTML = `
+            Producto: ${carrito_compras[producto].nombre} <br>
+            Precio: ${carrito_compras[producto].precio}
+            `;
+        }
         console.log("Carrito por consola: ",carrito_compras); //Funciona.
     }
     
@@ -76,6 +81,8 @@ stock_productos.push(new Productos(0003,"Samsung Galaxy S21+", 332000, "Celulare
 //stock_productos.push(new Productos(0006,"Samsung Galaxy S9+", 273000, "Celulares", "Celular Alta Gama"));
 
 console.log(stock_productos);
+
+console.log(stock_productos[0].nombre);
 
 console.log(stock_productos.join(" - ")); //consultar como ver los objetos con Join.
 
